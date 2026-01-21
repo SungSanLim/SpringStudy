@@ -7,7 +7,7 @@ public class BoardDto {
     private Integer bno;
     private String title;
     private String content;
-    private String wirter;
+    private String writer;
     private int view_cnt;
     private int comment_cnt;
     private Date reg_date;
@@ -15,22 +15,21 @@ public class BoardDto {
     public BoardDto(){
 
     }
-    public BoardDto(String title, String content, String wirter) {
+    public BoardDto(String title, String content, String writer) {
         this.title = title;
         this.content = content;
-        this.wirter = wirter;
+        this.writer = writer;
     }
-
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         BoardDto boardDto = (BoardDto) o;
-        return Objects.equals(bno, boardDto.bno) && Objects.equals(title, boardDto.title) && Objects.equals(content, boardDto.content) && Objects.equals(wirter, boardDto.wirter);
+        return Objects.equals(bno, boardDto.bno) && Objects.equals(title, boardDto.title) && Objects.equals(content, boardDto.content) && Objects.equals(writer, boardDto.writer);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bno, title, content, wirter);
+        return Objects.hash(bno, title, content, writer);
     }
 
     @Override
@@ -39,7 +38,7 @@ public class BoardDto {
                 "bno=" + bno +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
-                ", wirter='" + wirter + '\'' +
+                ", writer='" + writer + '\'' +
                 ", view_cnt=" + view_cnt +
                 ", comment_cnt=" + comment_cnt +
                 ", reg_date=" + reg_date +
@@ -70,12 +69,12 @@ public class BoardDto {
         this.content = content;
     }
 
-    public String getWirter() {
-        return wirter;
+    public String getWriter() {
+        return writer;
     }
 
-    public void setWirter(String wirter) {
-        this.wirter = wirter;
+    public void setWriter(String writer) {
+        this.writer = writer;
     }
 
     public int getView_cnt() {
